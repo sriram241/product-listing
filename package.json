@@ -9,9 +9,10 @@
     "serve": "browser-sync start --server --files 'dist/css/*.css, dist/js/*.js'",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
     "lint": "eslint src/scripts/*.js",
+    "imagemin": "imagemin public/assets/images/* -o dist/images -p",
     "build:css": "npm run scss && npm run autoprefixer",
     "build:js": "npm run lint && npm run uglify",
-    "build": "npm run build:css && npm run build:js"
+    "build": "npm run build:css && npm run build:js && npm run imagemin"
   },
   "keywords": [
     "JS",
@@ -25,6 +26,7 @@
     "autoprefixer": "^10.4.5",
     "browser-sync": "^2.27.9",
     "eslint": "^8.14.0",
+    "imagemin-cli": "^7.0.0",
     "node-sass": "^7.0.1",
     "postcss-cli": "^9.1.0",
     "uglify-js": "^3.15.4"

@@ -25,7 +25,7 @@ function resizeEventHandler() {
   handleDeviceChange(smallDevice);
 }
 function getProductsData() {
-  let api_endPoint = "/src/assets/data.json";
+  let api_endPoint = "/static/assets/data.json";
   document.getElementById("loader").classList.add("showLoader");
   fetch(api_endPoint, {
     method: "GET",
