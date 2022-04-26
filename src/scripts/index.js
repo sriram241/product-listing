@@ -103,10 +103,14 @@ function search() {
   const productNames = document.querySelectorAll('.product-name');
   productNames.forEach((item) => {
     let text = item.textContent;
-    if (text.toLowerCase().includes(filterText.toLowerCase())) {
-      item.parentElement.style.display = '';
+    if(filterText.length >=3) {
+      if (text.toLowerCase().includes(filterText.toLowerCase())) {
+        item.parentElement.style.display = '';
+      } else {
+        item.parentElement.style.display = 'none';
+      }
     } else {
-      item.parentElement.style.display = 'none';
+      item.parentElement.style.display = '';
     }
   });
 }
