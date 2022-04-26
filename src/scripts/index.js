@@ -26,6 +26,7 @@ function resizeEventHandler() {
 }
 function getProductsData() {
   let api_endPoint = "/src/assets/data.json";
+  document.getElementById("loader").classList.add("showLoader");
   fetch(api_endPoint, {
     method: "GET",
     headers: new Headers({
@@ -35,8 +36,10 @@ function getProductsData() {
     .then(response => response.json())
     .then(jsonData => {
       constructImages(jsonData);
+      document.getElementById("loader").classList.remove("showLoader");
     })
     .catch(err => {
+      document.getElementById("loader").classList.remove("showLoader");
       alert(err + "Error fetching Product details");
     });
 }

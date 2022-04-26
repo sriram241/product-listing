@@ -28,3 +28,40 @@ body {
   width: 100%;
   padding: 0 20px;
 }
+
+.showLoader {
+  display: flex !important;
+}
+
+.loaderDiv {
+  display: none;
+  @include position(
+    $position: absolute,
+    $top: 0,
+    $left: 0,
+    $bottom: 0,
+    $right: 0
+  );
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  .spinner-border {
+    display: inline-block;
+    width: 8rem;
+    height: 8rem;
+    border: 0.4em solid #2558cc;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: 0.75s linear infinite spinner-border;
+    animation: 0.75s linear infinite spinner-border;
+  }
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
