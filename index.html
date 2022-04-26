@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+  <title>Westeros - Product Listing</title>
+  <link rel="stylesheet" href="/dist/css/style.css" type="text/css" />
+  <meta charset="UTF-8" />
+  <meta name="description" content="Westeros - Product Listing" />
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript" />
+  <meta name="author" content="Sriram Raghavan" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="app-container">
+    <section>
+      <!--Page Wrapper -->
+      <div class="page-wrapper">
+        <!-- Side Nav -->
+        <section class="sidenav">
+          <div class="sidenav-wrapper">
+            <div class="logo-wrapper text-center" id="logo-text">
+              Westeros
+            </div>
+            <div class="links-wrapper">
+              <div class="indiv-link">
+                <svg xmlns="http://www.w3.org/2000/svg" class="indiv-icon" viewBox="0 0 512 512">
+                  <rect x="32" y="128" width="448" height="320" rx="48" ry="48" fill="none" stroke="currentColor"
+                    stroke-linejoin="round" stroke-width="32" />
+                  <path d="M144 128V96a32 32 0 0132-32h160a32 32 0 0132 32v32M480 240H32M320 240v24a8 8 0 01-8 8H200a8 8 0 01-8-8v-24"
+                    fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+                </svg>
+                <span class="text">Products</span>
+              </div>
+              <div class="indiv-link">
+                <svg xmlns="http://www.w3.org/2000/svg" class="indiv-icon" viewBox="0 0 512 512">
+                  <path d="M336 264.13V436c0 24.3-19.05 44-42.95 44H107c-23.95 0-43-19.7-43-44V172a44.26 44.26 0 0144-44h94.12a24.55 24.55 0 0117.49 7.36l109.15 111a25.4 25.4 0 017.24 17.77z"
+                    fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" />
+                  <path d="M200 128v108a28.34 28.34 0 0028 28h108" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="32" />
+                  <path d="M176 128V76a44.26 44.26 0 0144-44h94a24.83 24.83 0 0117.61 7.36l109.15 111A25.09 25.09 0 01448 168v172c0 24.3-19.05 44-42.95 44H344"
+                    fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" />
+                  <path d="M312 32v108a28.34 28.34 0 0028 28h108" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="32" />
+                </svg>
+                <span class="text">Whitelist</span>
+              </div>
+              <div class="indiv-link">
+                <svg xmlns="http://www.w3.org/2000/svg" class="indiv-icon" viewBox="0 0 512 512">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                    d="M304 48l112 112-112 112M398.87 160H96M208 464L96 352l112-112M114 352h302" />
+                </svg>
+                <span class="text">API Application</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Main Content -->
+        <section class="main-content">
+          <!-- Header -->
+          <header class="header">
+            <div class="container">
+              <div class="content">
+                <div class="search-wrapper">
+                  <input type="text" class="searchTerm" placeholder="Type to Search" />
+                  <!-- <div class="search-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" viewBox="0 0 512 512"><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+                    </div> -->
+                </div>
+                <div class="profile-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 512 512"><path d="M258.9 48C141.92 46.42 46.42 141.92 48 258.9c1.56 112.19 92.91 203.54 205.1 205.1 117 1.6 212.48-93.9 210.88-210.88C462.44 140.91 371.09 49.56 258.9 48zm126.42 327.25a4 4 0 01-6.14-.32 124.27 124.27 0 00-32.35-29.59C321.37 329 289.11 320 256 320s-65.37 9-90.83 25.34a124.24 124.24 0 00-32.35 29.58 4 4 0 01-6.14.32A175.32 175.32 0 0180 259c-1.63-97.31 78.22-178.76 175.57-179S432 158.81 432 256a175.32 175.32 0 01-46.68 119.25z"/><path d="M256 144c-19.72 0-37.55 7.39-50.22 20.82s-19 32-17.57 51.93C191.11 256 221.52 288 256 288s64.83-32 67.79-71.24c1.48-19.74-4.8-38.14-17.68-51.82C293.39 151.44 275.59 144 256 144z"/></svg>
+                    <div class="user-name">
+                      Lorem Ipsum
+                    </div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <!-- List of Products -->
+          <section>
+            <div class="products-wrapper">
+              <div class="container">
+                <!-- Heading -->
+                <h3>
+                  Products
+                </h3>
+                <hr />
+                <!-- Product listing wrapper -->
+                <div class="listing-wrapper">
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </section>
+  </div>
+  <script type="text/javascript" src="/dist/js/app.min.js"></script>
+</body>
+
+</html>

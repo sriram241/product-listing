@@ -1,0 +1,131 @@
+@mixin position(
+  $position,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin font-bree-serif(
+  $size: false,
+  $color: false,
+  $weight: false,
+  $lh: false
+) {
+  font-family: "Bree Serif", Helvetica, Arial, serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+
+@mixin font-roboto-sans(
+  $size: false,
+  $color: false,
+  $weight: false,
+  $lh: false
+) {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+
+@mixin flexbox(
+  $display: flex,
+  $direction: row,
+  $placeContent: null,
+  $placeItems: null,
+  $wrap: nowrap,
+  $shrink: 0,
+  $grow: 0,
+  $alignContent: null,
+  $justifyContent: null,
+  $alignItems: null,
+  $justifyItems: null,
+  $basis: null
+) {
+  display: $display;
+  flex-direction: $direction;
+
+  @if $placeContent == null {
+    @if $alignContent {
+      align-content: $alignContent;
+    }
+    @if $justifyContent {
+      justify-content: $justifyContent;
+    }
+  } @else {
+    place-content: $placeContent;
+  }
+
+  @if $placeItems == null {
+    @if $alignItems {
+      align-items: $alignItems;
+    }
+    @if $justifyItems {
+      justify-items: $justifyItems;
+    }
+  } @else {
+    place-items: $placeItems;
+  }
+
+  flex-wrap: $wrap;
+  flex-shrink: $shrink;
+  flex-grow: $grow;
+  flex-basis: $basis;
+}
+
+$breakpoints: (
+  "small": (
+    min-width: 767px
+  ),
+  "medium": (
+    min-width: 992px
+  ),
+  "large": (
+    min-width: 1200px
+  ),
+  "x-large": (
+      min-width: 1320px
+  ),
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}

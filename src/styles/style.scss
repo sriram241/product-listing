@@ -1,0 +1,162 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./global.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto:wght@300;400&display=swap");
+
+/* Side nav */
+.sidenav-wrapper {
+  width: 4.375rem;
+  @include position(fixed, $top: 0, $bottom: 0, $left: 0);
+  height: 100vh;
+  background-color: $sidebar-bg-color;
+  z-index: 2;
+
+  @include respond-to("small") {
+    width: 14.375rem;
+  }
+
+  .logo-wrapper {
+    background-color: $logo-bg;
+    @include font-bree-serif($size: 1.625rem, $color: $white);
+    padding: 1.25rem 0;
+  }
+
+  .links-wrapper {
+    padding-top: 1.25rem;
+  }
+
+  .indiv-link {
+    @include flexbox($placeItems: center);
+    color: #e7e7e7;
+    padding: 1.25rem;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    cursor: pointer;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: rgba(231, 231, 231, 0.7);
+        color: $black;
+        .indiv-icon {
+          color: $black;
+        }
+      }
+    }
+
+    .indiv-icon {
+      width: 1.5rem;
+      color: $white;
+    }
+    .text {
+      display: none;
+      @include respond-to("small") {
+        display: block;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+/* Main Content */
+
+.main-content {
+  transition: width 0.3s ease-in-out;
+  position: relative;
+  float: right;
+  height: 100%;
+  z-index: 1;
+  width: calc(100% - 4.375rem);
+
+  @include respond-to("small") {
+    width: calc(100% - 14.375rem);
+  }
+
+  /* Header */
+  .header {
+    background-color: $header-bg;
+    height: 75px;
+    @include flexbox($placeItems: center);
+    @include position(fixed, $top: 0, $bottom: 0, $left: 4.375em);
+    width: calc(100% - 4.375em);
+    z-index: 11;
+    @include respond-to("small") {
+      left: 14.375rem;
+      width: calc(100% - 14.375rem);
+    }
+    .content {
+      @include flexbox($alignItems: center, $justifyContent: space-between);
+    }
+    .profile-wrapper {
+      @include flexbox($alignItems: center);
+      color: $header-text;
+      .icon {
+        width: 1.25rem;
+        fill: $header-text;
+      }
+      .user-name {
+        font-size: 0.875rem;
+        font-weight: 400;
+        padding-left: 0.3rem;
+      }
+    }
+    .search-wrapper {
+      .searchTerm {
+        background-color: $white;
+        padding: 0.65rem 0.938rem;
+        border-width: 0;
+        border-radius: 1.5rem;
+      }
+      .search-icon-wrapper {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  /* Products wrapper */
+
+  .products-wrapper {
+    padding: 45px 0;
+    position: relative;
+    top: 45px;
+
+    h3 {
+        color: $header-text;
+    }
+    hr {
+        border-top-width: 0.5px;
+        border-bottom-width: 0.5px;
+    }
+    .listing-wrapper {
+      @include respond-to("small") {
+        flex-direction: row;
+      }
+      @include flexbox($direction: column, $wrap: wrap, $shrink: 1, $basis: auto);
+      .indiv-product {
+        @include respond-to("medium") {
+            flex-basis: 33%;
+            max-width: 33%;
+        }
+        @include respond-to("large") {
+          flex-basis: 20%;
+          max-width: 20%;
+        }
+        @include flexbox($basis:100%, $grow: 0, $shrink: 0, $direction: column);
+        max-width: 100%;
+        padding: 1.25rem 0.75rem;
+        cursor: pointer;
+      }
+      .product-image img {
+        width: 100%;
+        border-radius: 0.4rem;
+      }
+      .product-name {
+        padding-top: 0.625rem;
+      }
+      .product-author {
+        font-size: 0.625rem;
+      }
+    }
+  }
+}

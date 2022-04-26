@@ -1,0 +1,31 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  @include font-roboto-sans($weight: 300);
+  margin: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  @include respond-to("x-large") {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  width: 100%;
+  padding: 0 20px;
+}

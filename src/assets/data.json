@@ -1,0 +1,96 @@
+{
+    "data": {
+        "products": [
+            {
+                "name": "Apple",
+                "image": "https://res.cloudinary.com/dhnbrrrdh/image/upload/v1650936476/product-listing/product-1_py5myz.webp",
+                "author": "Random Author",
+                "expired": false
+            },
+            {
+                "name": "Samsung",
+                "image": "https://res.cloudinary.com/dhnbrrrdh/image/upload/v1650881089/product-listing/product-2_gx6tji.webp",
+                "author": "Random Author",
+                "expired": false
+            },
+            {
+                "name": "Nokia",
+                "image": "https://res.cloudinary.com/dhnbrrrdh/image/upload/v1650881089/product-listing/product-3_u85pu2.webp",
+                "author": "Random Author",
+                "expired": false
+            },
+            {
+                "name": "Motorala",
+                "image": "https://res.cloudinary.com/dhnbrrrdh/image/upload/v1650936558/product-listing/product-4_oih1us.webp",
+                "author": "Random Author",
+                "expired": false
+            },
+            {
+                "name": "One Plus",
+                "image": "https://res.cloudinary.com/dhnbrrrdh/image/upload/v1650881089/product-listing/product-5_dzndly.webp",
+                "author": "Random Author",
+                "expired": false
+            },
+            {
+                "name": "Sony",
+                "image": "https://res.cloudinary.com/dhnbrrrdh/image/upload/v1650881089/product-listing/product-6_bnwo0p.webp",
+                "author": "Random Author",
+                "expired": false
+            },
+            {
+                "name": "Instagram",
+                "image": "https://res.cloudinary.com/dhnbrrrdh/image/upload/v1650881089/product-listing/product-7_swwdrb.webp",
+                "author": "Random Author",
+                "expired": false
+            },
+            {
+                "name": "LG",
+                "image": "https://res.cloudinary.com/dhnbrrrdh/image/upload/v1650943517/product-listing/product-8_cnfzbp.webp",
+                "author": "Random Author",
+                "expired": false
+            },
+            {
+                "name": "Videocon",
+                "image": "https://res.cloudinary.com/dhnbrrrdh/image/upload/v1650881089/product-listing/product-9_gzi0rp.webp",
+                "author": "Random Author",
+                "expired": false
+            },
+            {
+                "name": "Hitachi",
+                "image": "https://res.cloudinary.com/dhnbrrrdh/image/upload/v1650881090/product-listing/product-10_xxn2j1.webp",
+                "author": "Random Author",
+                "expired": false
+            },
+            {
+                "name": "Adobe",
+                "image": "https://res.cloudinary.com/dhnbrrrdh/image/upload/v1650881090/product-listing/product-11_qtuovn.webp",
+                "author": "Random Author",
+                "expired": false
+            },
+            {
+                "name": "Sketch",
+                "image": "https://res.cloudinary.com/dhnbrrrdh/image/upload/v1650881089/product-listing/product-12_e1uxc4.webp",
+                "author": "Random Author",
+                "expired": false
+            },
+            {
+                "name": "Figma",
+                "image": "https://res.cloudinary.com/dhnbrrrdh/image/upload/v1650881090/product-listing/product-13_jatkhs.webp",
+                "author": "Random Author",
+                "expired": false
+            },
+            {
+                "name": "Preview",
+                "image": "https://res.cloudinary.com/dhnbrrrdh/image/upload/v1650881090/product-listing/product-14_ysssvj.webp",
+                "author": "Random Author",
+                "expired": false
+            },
+            {
+                "name": "Ironman",
+                "image": "https://res.cloudinary.com/dhnbrrrdh/image/upload/v1650881090/product-listing/product-15_lb1yft.webp",
+                "author": "Random Author",
+                "expired": false
+            }
+        ]
+    }
+}
