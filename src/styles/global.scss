@@ -24,7 +24,6 @@ body {
   @include respond-to("x-large") {
     max-width: 1320px;
     margin: 0 auto;
-    padding: 0;
   }
   width: 100%;
   padding: 0 20px;
