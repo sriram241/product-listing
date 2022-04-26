@@ -100,6 +100,7 @@
       }
     }
     .search-wrapper {
+      display: flex;
       .searchTerm {
         background-color: $white;
         padding: 0.65rem 0.938rem;
@@ -112,7 +113,7 @@
         height: 1.125rem;
         position: relative;
         left: -37px;
-        top: 0.375rem;
+        top: 0.45rem;
         z-index: 11;
         background-color: #fff;
       }
