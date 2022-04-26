@@ -9,11 +9,10 @@ function truncateHeader(e) {
   }
 }
 
+//Resize Event handler
 function resizeEventHandler() {
   const smallDevice = window.matchMedia("(max-width: 786px)");
-
   smallDevice.addListener(handleDeviceChange);
-
   function handleDeviceChange(e) {
     if (e.matches) {
       truncateHeader(true);
@@ -21,9 +20,10 @@ function resizeEventHandler() {
       truncateHeader(false);
     }
   }
-
   handleDeviceChange(smallDevice);
 }
+
+//AJAX Call for getting Product data
 function getProductsData() {
   let api_endPoint = "/static/assets/data.json";
   document.getElementById("loader").classList.add("showLoader");
@@ -44,6 +44,7 @@ function getProductsData() {
     });
 }
 
+//Construct Images
 function constructImages(data) {
   let productsData = data.data.products;
 
@@ -89,7 +90,23 @@ function constructImages(data) {
   parentElement.appendChild(fragment);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   resizeEventHandler();
   getProductsData();
 });
+
+//Search/Filter
+document.querySelector('#search-input', addEventListener('input', search));
+function search() {
+  const searchText = document.querySelector('#search-input');
+  const filterText = searchText.value.toLowerCase();
+  const productNames = document.querySelectorAll('.product-name');
+  productNames.forEach((item) => {
+    let text = item.textContent;
+    if (text.toLowerCase().includes(filterText.toLowerCase())) {
+      item.parentElement.style.display = '';
+    } else {
+      item.parentElement.style.display = 'none';
+    }
+  });
+}
