@@ -151,7 +151,6 @@
         @include flexbox($basis:100%, $grow: 0, $shrink: 0, $direction: column);
         max-width: 100%;
         padding: 1.25rem 0.75rem;
-        cursor: pointer;
       }
       .product-image img {
         width: 100%;
