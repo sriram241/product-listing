@@ -97,12 +97,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Search/Filter
 document.querySelector('#search-input', addEventListener('input', search));
+
 function search() {
   const searchText = document.querySelector('#search-input');
   const filterText = searchText.value.toLowerCase();
   const productNames = document.querySelectorAll('.product-name');
   productNames.forEach((item) => {
     let text = item.textContent;
+    /* Enable search only for characters more than 3 */
     if(filterText.length >=3) {
       if (text.toLowerCase().includes(filterText.toLowerCase())) {
         item.parentElement.style.display = '';

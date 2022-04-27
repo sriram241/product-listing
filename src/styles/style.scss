@@ -152,12 +152,30 @@
         max-width: 100%;
         padding: 1.25rem 0.75rem;
       }
-      .product-image img {
-        width: 100%;
-        border-radius: 0.4rem;
+      
+      .product-image {
+        background-image: linear-gradient(90deg, #ddd 0px, rgba(232,232,232,1) 40px, #ddd 80px);
+        animation: skeleton 1.6s infinite linear;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 0.4rem;
+        }
       }
+
+      @keyframes skeleton {
+        0% {
+          background-position: -32px;
+        }
+        40%, 100% {
+          background-position: 208px;
+        }
+      }
+
       .product-name {
-        padding-top: 0.625rem;
+        padding-top: 1.25rem;
+        font-size: 1.125rem;
+        font-weight: 400;
       }
       .product-author {
         font-size: 0.625rem;
