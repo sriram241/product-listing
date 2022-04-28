@@ -28,10 +28,11 @@
 
   .indiv-link {
     @include flexbox($placeItems: center);
-    color: #e7e7e7;
+    color: $link-text-color;
     padding: 1.25rem;
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
     cursor: pointer;
+    font-weight: 400;
 
     @media (hover: hover) and (pointer: fine) {
       &:hover {
@@ -90,7 +91,7 @@
       @include flexbox($alignItems: center);
       color: $header-text;
       .icon {
-        width: 1.25rem;
+        width: 2.35rem;
         fill: $header-text;
       }
       .user-name {
@@ -101,6 +102,13 @@
     }
     .search-wrapper {
       display: flex;
+
+      input::placeholder {
+        font-style: italic;
+        font-size: 0.75rem;
+        color: $header-text;
+      }
+
       .searchTerm {
         background-color: $white;
         padding: 0.65rem 0.938rem;
@@ -115,7 +123,7 @@
         left: -37px;
         top: 0.45rem;
         z-index: 11;
-        background-color: #fff;
+        background-color: $white;
       }
     }
   }
@@ -128,33 +136,61 @@
     top: 45px;
 
     h3 {
-        color: $header-text;
+      color: $light-black;
     }
+
     hr {
-        border-top-width: 0.5px;
-        border-bottom-width: 0.5px;
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid $light-grey;
+      margin: 1em 0;
+      padding: 0;
     }
     .listing-wrapper {
       @include respond-to("small") {
         flex-direction: row;
       }
-      @include flexbox($direction: column, $wrap: wrap, $shrink: 1, $basis: auto);
+      @include flexbox(
+        $direction: column,
+        $wrap: wrap,
+        $shrink: 1,
+        $basis: auto
+      );
       .indiv-product {
         @include respond-to("medium") {
-            flex-basis: 33%;
-            max-width: 33%;
+          flex-basis: 33%;
+          max-width: 33%;
         }
         @include respond-to("large") {
           flex-basis: 20%;
           max-width: 20%;
         }
-        @include flexbox($basis:100%, $grow: 0, $shrink: 0, $direction: column);
+        @include flexbox(
+          $basis: 100%,
+          $grow: 0,
+          $shrink: 0,
+          $direction: column
+        );
         max-width: 100%;
         padding: 1.25rem 0.75rem;
+        transition: all 0.3s ease-in-out;
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            background-color: rgba(231, 231, 231, 0.7);
+            cursor: pointer;
+          }
+        }
+        &:first-child {
+        }
       }
-      
       .product-image {
-        background-image: linear-gradient(90deg, #ddd 0px, rgba(232,232,232,1) 40px, #ddd 80px);
+        background-image: linear-gradient(
+          90deg,
+          #ddd 0px,
+          rgba(232, 232, 232, 1) 40px,
+          #ddd 80px
+        );
         animation: skeleton 1.6s infinite linear;
         img {
           width: 100%;
@@ -162,12 +198,12 @@
           border-radius: 0.4rem;
         }
       }
-
       @keyframes skeleton {
         0% {
           background-position: -32px;
         }
-        40%, 100% {
+        40%,
+        100% {
           background-position: 208px;
         }
       }
@@ -176,9 +212,11 @@
         padding-top: 1.25rem;
         font-size: 1.125rem;
         font-weight: 400;
+        color: $light-black;
       }
       .product-author {
-        font-size: 0.625rem;
+        padding-top: 0.5rem;
+        font-size: 0.75rem;
       }
     }
   }

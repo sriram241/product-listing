@@ -105,7 +105,7 @@ function search() {
   productNames.forEach((item) => {
     let text = item.textContent;
     /* Enable search only for characters more than 3 */
-    if(filterText.length >=3) {
+    if(filterText.length >=2) {
       if (text.toLowerCase().includes(filterText.toLowerCase())) {
         item.parentElement.style.display = '';
       } else {
